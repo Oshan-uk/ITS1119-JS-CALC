@@ -18,40 +18,44 @@
 </head>
 <body>
 
-<div class="app-container">
+<div class="app-wrapper">
 
-    <div class="calculator-container">
-        <div class="calculator-display">
-            <div class="expression-display"></div>
-            <div class="result-display"></div>
+    <div class="calculator-card">
+
+        <div class="display-area">
+            <div id="previous-display"></div>
+            <div id="current-display">0</div>
         </div>
 
-        <div class="button-grid">
-            <button onclick="clearAll()">C</button>
-            <button onclick="selectOperator('/')">/</button>
-            <button onclick="enterNumber('7')">7</button>
-            <button onclick="enterNumber('8')">8</button>
-            <button onclick="enterNumber('8')">9</button>
+        <div class="buttons-grid">
 
-            <button onclick="selectOperator('*')">x</button>
-            <button onclick="enterNumber('4')">4</button>
-            <button onclick="enterNumber('5')">5</button>
-            <button onclick="enterNumber('6')">6</button>
+            <button class="btn clear-btn" onclick="clearAll()">AC</button>
+            <button class="btn operator-btn" onclick="setOperator('/')">÷</button>
 
-            <button onclick="selectOperator('-')">-</button>
-            <button onclick="enterNumber('1')">1</button>
-            <button onclick="enterNumber('2')">2</button>
-            <button onclick="enterNumber('3')">3</button>
+            <button class="btn" onclick="addNumber('7')">7</button>
+            <button class="btn" onclick="addNumber('8')">8</button>
+            <button class="btn" onclick="addNumber('9')">9</button>
+            <button class="btn operator-btn" onclick="setOperator('*')">×</button>
 
-            <button onclick="selectOperator('+')">+</button>
-            <button onclick="enterNumber('0')">0</button>
-            <button onclick="addDecimal()">.</button>
-            <button onclick="calculateResult()">=</button>
+            <button class="btn" onclick="addNumber('4')">4</button>
+            <button class="btn" onclick="addNumber('5')">5</button>
+            <button class="btn" onclick="addNumber('6')">6</button>
+            <button class="btn operator-btn" onclick="setOperator('-')">−</button>
+
+            <button class="btn" onclick="addNumber('1')">1</button>
+            <button class="btn" onclick="addNumber('2')">2</button>
+            <button class="btn" onclick="addNumber('3')">3</button>
+            <button class="btn operator-btn" onclick="setOperator('+')">+</button>
+
+            <button class="btn zero-btn" onclick="addNumber('0')">0</button>
+            <button class="btn" onclick="addDot()">.</button>
+            <button class="btn equal-btn" onclick="calculateResult()">=</button>
+
         </div>
+
     </div>
+
 </div>
-
-
 <script src="script.js"></script>
 <script src="assets/lib/jquery-4.0.0.min.js"></script>
 </body>
